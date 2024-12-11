@@ -47,7 +47,6 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile5`, function (sprite32,
     enemigo(10, 8, 90)
     enemigo(14, 8, 90)
     enemigo(17, 8, 90)
-    game.gameOver(true)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestOpen, function (sprite2, location2) {
     tiles.setCurrentTilemap(tilemap`level13`)
@@ -136,7 +135,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile2`, function (sprite6, 
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Fantasma.isHittingTile(CollisionDirection.Bottom)) {
-        Fantasma.vy = -135
+        Fantasma.vy = -150
         music.play(music.createSoundEffect(WaveShape.Sine, 5000, 67, 51, 255, 303, SoundExpressionEffect.Tremolo, InterpolationCurve.Curve), music.PlaybackMode.UntilDone)
     }
 })
@@ -202,4 +201,4 @@ controller.moveSprite(Fantasma, 100, 0)
 tiles.setCurrentTilemap(tilemap`level1`)
 tiles.placeOnTile(Fantasma, tiles.getTileLocation(1, 12))
 scene.cameraFollowSprite(Fantasma)
-Fantasma.ay = 175
+Fantasma.ay = 210
